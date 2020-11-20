@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>cgshop</artifactId>
+        <groupId>com.example</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>cg-service-api</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>goods-api</module>
+        <module>search-api</module>
+        <module>user-api</module>
+        <module>order-api</module>
+        <module>seckill-api</module>
+    </modules>
+
+    <dependencies>
+        <!--通用的common-->
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>cg-common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!--每个工程都有Pojo，都需要用到该包对应的注解-->
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>persistence-api</artifactId>
+            <version>1.0</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+</project>

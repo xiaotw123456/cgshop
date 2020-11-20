@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: rabbitmq
+  rabbitmq:
+    host: 192.168.16.189
+    port: 5672
+    username: xiao
+    password: 123456
+    virtual-host: leyou
+
+server:
+  port: 18000
+
