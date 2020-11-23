@@ -46,7 +46,7 @@ public class SkuController {
      */
     @GetMapping(value = "/search/{page}/{size}" )
     public Result<PageInfo> findPage(@PathVariable  int page, @PathVariable  int size){
-        //调用SkuService实现分页查询Sku
+        //调用SkuService实现分页查询Sku 信息
         PageInfo<Sku> pageInfo = skuService.findPage(page, size);
         return new Result<PageInfo>(true,StatusCode.OK,"查询成功",pageInfo);
     }
